@@ -3,7 +3,7 @@ import { NativeScriptModule }         from 'nativescript-angular/nativescript.mo
 
 import { AppRoutingModule }           from './app-routing.module';
 import { AppComponent }               from './app.component';
-import { HomeComponent }              from './home/home.component';
+import { HomeComponent }              from './features/home/home.component';
 
 
 // Uncomment and add to NgModule imports if you need to use two-way binding
