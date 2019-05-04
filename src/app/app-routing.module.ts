@@ -21,6 +21,10 @@ export const routes: Routes = [
 		path: 'admin',
 		loadChildren: './features/admin/admin.module#AdminModule',
 	},
+	{
+		path: 'auth',
+		loadChildren: './features/auth/auth.module#AuthModule',
+	},
 ];
 
 @NgModule({
