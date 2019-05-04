@@ -13,4 +13,8 @@ export const routes: Routes = [
 		component: HomeComponent,
 		data: { title: '' },
 	},
+	{
+		path: 'auth',
+		loadChildren: './features/auth/auth.module#AuthModule',
+	},
 ];
