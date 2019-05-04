@@ -25,7 +25,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-	imports: [NativeScriptRouterModule.forRoot(routes)],
+	imports: [NativeScriptRouterModule.forChild(routes)],
 	exports: [NativeScriptRouterModule],
 })
 export class AuthRoutingModule { }
