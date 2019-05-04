@@ -9,7 +9,7 @@ import { ResetPasswordComponent }  from './reset-password/reset-password.compone
 const routes: Routes = [
 	{
 		path: '',
-		redirectTo: '/login',
+		redirectTo: 'login',
 		pathMatch: 'full',
 	},
 	{

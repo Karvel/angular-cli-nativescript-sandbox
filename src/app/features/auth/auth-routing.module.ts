@@ -7,7 +7,7 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
 const routes: Routes = [
 	{
 		path: '',
-		redirectTo: '/login',
+		redirectTo: 'login',
 		pathMatch: 'full',
 	},
 	{
@@ -26,7 +26,7 @@ const routes: Routes = [
   imports : [ RouterModule.forChild(routes) ],
   exports : [ RouterModule ],
 })
-export class AuthRoutingModule {}
+export class AuthRoutingModule { }
 
 export const routedComponents = [
 	LoginComponent,
