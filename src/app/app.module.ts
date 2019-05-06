@@ -1,10 +1,12 @@
-import { NgModule }         from '@angular/core';
-import { BrowserModule }    from '@angular/platform-browser';
+import { NgModule }                from '@angular/core';
+import { BrowserModule }           from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent }     from './app.component';
-import { HomeComponent }    from './features/home/home.component';
+import { AppRoutingModule }        from './app-routing.module';
+import { AppComponent }            from './app.component';
+import { HomeComponent }           from './features/home/home.component';
 
+import { SharedModule }            from './infrastructure/shared/shared.module';
 
 @NgModule({
 	declarations: [
@@ -13,6 +15,8 @@ import { HomeComponent }    from './features/home/home.component';
 	],
 	imports: [
 		BrowserModule,
+		BrowserAnimationsModule,
+		MaterialModule,
 		AppRoutingModule,
 	],
 	providers: [],
