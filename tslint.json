@@ -23,7 +23,8 @@
     "import-spacing": false,
     "indent": [
       true,
-      "spaces"
+      "tabs",
+      4
     ],
     "interface-over-type-literal": true,
     "label-position": true,
@@ -92,6 +93,7 @@
       true,
       "always"
     ],
+    "trailing-comma": [true, {"multiline": "always", "singleline": "never"}],
     "triple-equals": [
       true,
       "allow-null-check"
