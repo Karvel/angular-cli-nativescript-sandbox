@@ -6,6 +6,8 @@ import { AppRoutingModule }        from './app-routing.module';
 import { AppComponent }            from './app.component';
 import { HomeComponent }           from './features/home/home.component';
 
+import { CoreModule }              from './infrastructure/core/core.module';
+import { MaterialModule }          from './infrastructure/shared/imports/material.module';
 import { SharedModule }            from './infrastructure/shared/shared.module';
 
 @NgModule({
@@ -16,7 +18,9 @@ import { SharedModule }            from './infrastructure/shared/shared.module';
 	imports: [
 		BrowserModule,
 		BrowserAnimationsModule,
+		CoreModule,
 		MaterialModule,
+		SharedModule.forRoot(),
 		AppRoutingModule,
 	],
 	providers: [],
