@@ -1,5 +1,8 @@
  <StackLayout class="p-20">
-	<Label text="Page not found, " class="h1 text-center" textWrap="true"></Label>
-	<Button text="click here" [nsRouterLink]="['/']" pageTransition="slide" clearHistory="true"></Button>
-	<Label text=" to return to the homepage." class="h1 text-center" textWrap="true"></Label>
+    <Label
+        text="Page not found, click here to return to the homepage."
+        class="h1 text-center"
+        textWrap="true"
+        (tap)="returnToRoot()"
+    ></Label>
 </StackLayout>
