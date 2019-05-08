@@ -5,7 +5,10 @@ import { AppComponent }               from './app.component';
 import {
 	AppRoutingModule,
 	routedComponents as mainAppRoutedComponents,
-  }                                from './app-routing.module';
+  }                                   from './app-routing.module';
+
+  import { CoreModule }               from './infrastructure/core/core.module';
+  import { SharedModule }             from './infrastructure/shared/shared.module';
 
 // Uncomment and add to NgModule imports if you need to use two-way binding
 // import { NativeScriptFormsModule } from 'nativescript-angular/forms';
@@ -20,6 +23,8 @@ import {
 	],
 	imports: [
 		NativeScriptModule,
+		CoreModule,
+		SharedModule.forRoot(),
 		AppRoutingModule,
 	],
 	providers: [],
