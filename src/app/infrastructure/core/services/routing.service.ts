@@ -1,8 +1,13 @@
 import { Injectable } from '@angular/core';
+import { Router }     from '@angular/router';
 
 @Injectable()
 export class RoutingService {
+	constructor(
+		public router: Router,
+	) { }
+
 	public navigateByURL(route: string = ''): void {
-		// noop
+		this.router.navigateByUrl(route);
 	}
 }
