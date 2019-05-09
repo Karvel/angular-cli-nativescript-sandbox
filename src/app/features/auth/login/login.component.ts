@@ -1,5 +1,12 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
-import { FormGroup, FormBuilder } from '@angular/forms';
+import {
+	ChangeDetectionStrategy,
+	Component,
+	OnInit,
+}                from '@angular/core';
+import {
+	FormBuilder,
+	FormGroup,
+}                from '@angular/forms';
 
 @Component({
 	selector        : 'app-login',

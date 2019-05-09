@@ -2,6 +2,7 @@ import {
 	Component,
 	ChangeDetectionStrategy,
 }                         from '@angular/core';
+
 import { RoutingService } from '../../infrastructure/core/services/routing.service';
 
 @Component({
