@@ -4,4 +4,8 @@
 		autocorrect="false"
 		[formControlName]="formControlTitle"
 	></TextField>
+	<Label
+		*ngIf="formControlErrors"
+		[text]="formControlErrors | formError"
+	></Label>
 </StackLayout>
