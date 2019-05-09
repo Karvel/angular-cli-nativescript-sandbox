@@ -1,4 +1,5 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { FormGroup, FormBuilder } from '@angular/forms';
 
 @Component({
 	selector        : 'app-login',
@@ -7,14 +8,21 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 	changeDetection : ChangeDetectionStrategy.OnPush,
 })
 export class LoginComponent implements OnInit {
+	public form: FormGroup;
 
-	constructor() { }
+	constructor(
+		private fb: FormBuilder,
+	) { }
 
 	public ngOnInit(): void {
-		this.login();
+		this.form = this.buildForm();
 	}
 
-	private login(): void {
-		console.log('admin login');
+	private buildForm(): FormGroup {
+		const form: FormGroup = this.fb.group({
+			firstName: '',
+		});
+
+		return form;
 	}
 }

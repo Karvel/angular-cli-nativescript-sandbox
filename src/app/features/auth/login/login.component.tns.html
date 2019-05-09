@@ -1,5 +1,19 @@
 <ActionBar [title]="'Native'"></ActionBar>
-<StackLayout  class="p-20">
-	<Label text="Login Native" class="h1 text-center" textWrap="true"></Label>
-	<Button text="Home" [nsRouterLink]="['/home']" pageTransition="slide" clearHistory="true"></Button>
+<StackLayout class="p-20" *ngIf="form">
+	<Label
+		text="Login Native"
+		class="h1 text-center"
+		textWrap="true"
+	></Label>
+	<app-required-input
+		[form]="form"
+		[formControlTitle]="'firstName'"
+		[placeholder]="'First Name'"
+	></app-required-input>
+	<Button
+		text="Home"
+		[nsRouterLink]="['/home']"
+		pageTransition="slide"
+		clearHistory="true"
+	></Button>
 </StackLayout>
