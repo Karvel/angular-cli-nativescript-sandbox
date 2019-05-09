@@ -4,7 +4,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class FormErrorPipe implements PipeTransform {
 	// Returns the first error value in the `AbstractControl` error object
 	// Expects an object with string or boolean key-value pairs
-	public transform(value: object): string {
+	public transform(value: Object): string {
 		if (!value) { return ''; }
 		if (typeof value !== 'object') { return value; }
 		const key: string = value[Object.keys(value)[0]];
