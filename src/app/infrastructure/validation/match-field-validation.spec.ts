@@ -7,8 +7,8 @@ import { MatchFieldValidation }   from './match-field-validation';
 
 !environment.testUnit
 ? Logger.log('Unit skipped')
-: describe('[Unit] MatchFieldValidation validFieldMatch()', () => {
-	const confirmEmailValidator = MatchFieldValidation.validFieldMatch('controlName', 'confirmControlName');
+: describe('[Unit] MatchFieldValidation validFieldMatch() default field name', () => {
+	const matchFieldValidator = MatchFieldValidation.validFieldMatch('controlName', 'confirmControlName');
 	const form: FormGroup = new FormGroup({
 		controlName: new FormControl(''),
 		confirmControlName: new FormControl(''),
@@ -19,7 +19,7 @@ import { MatchFieldValidation }   from './match-field-validation';
 	it(`should set control error as { 'confirmFieldRequired': 'Confirm Email is required.' } when value is an empty string`, () => {
 		controlName.setValue('');
 		confirmControlName.setValue('');
-		confirmEmailValidator(form);
+		matchFieldValidator(form);
 		const expectedValue = { 'confirmFieldRequired': 'Confirm Email is required.' };
 		expect(confirmControlName.errors).toEqual(expectedValue);
 	});
@@ -27,7 +27,7 @@ import { MatchFieldValidation }   from './match-field-validation';
 	it(`should set control error as { 'fieldsMismatched': 'Email fields do not match.' } when values do not match`, () => {
 		controlName.setValue('test@test.com');
 		confirmControlName.setValue('test@test.co');
-		confirmEmailValidator(form);
+		matchFieldValidator(form);
 		const expectedValue = { 'fieldsMismatched': 'Email fields do not match.' };
 		expect(confirmControlName.errors).toEqual(expectedValue);
 	});
@@ -35,7 +35,7 @@ import { MatchFieldValidation }   from './match-field-validation';
 	it(`should set control error as null when values match`, () => {
 		controlName.setValue('test@test.com');
 		confirmControlName.setValue('test@test.com');
-		confirmEmailValidator(form);
+		matchFieldValidator(form);
 		expect(controlName.errors).toEqual(null);
 		expect(confirmControlName.errors).toEqual(null);
 	});
