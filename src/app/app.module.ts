@@ -6,10 +6,9 @@ import { AppComponent }            from './app.component';
 import {
 	AppRoutingModule,
 	routedComponents as mainAppRoutedComponents,
-  }                                from './app-routing.module';
+}                                  from './app-routing.module';
 
 import { CoreModule }              from './infrastructure/core/core.module';
-import { MaterialModule }          from './infrastructure/shared/imports/material.module';
 import { SharedModule }            from './infrastructure/shared/shared.module';
 
 @NgModule({
@@ -21,7 +20,6 @@ import { SharedModule }            from './infrastructure/shared/shared.module';
 		BrowserModule,
 		BrowserAnimationsModule,
 		CoreModule,
-		MaterialModule,
 		SharedModule.forRoot(),
 		AppRoutingModule,
 	],

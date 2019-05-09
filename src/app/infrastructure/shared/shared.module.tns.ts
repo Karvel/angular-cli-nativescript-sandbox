@@ -13,6 +13,9 @@ import { pipes }                   from './pipes';
 		ReactiveFormsModule,
 	],
 	exports: [
+		CommonModule,
+		NativeScriptFormsModule,
+		ReactiveFormsModule,
 		controls,
 		pipes,
 	],

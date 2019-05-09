@@ -13,6 +13,9 @@ import { pipes }               from './pipes';
 		MaterialModule,
 	],
 	exports: [
+		CommonModule,
+		ReactiveFormsModule,
+		MaterialModule,
 		controls,
 		pipes,
 	],
