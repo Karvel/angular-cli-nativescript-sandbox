@@ -7,6 +7,7 @@ import {
 	FormBuilder,
 	FormGroup,
 }                from '@angular/forms';
+import { IUser } from '../../../infrastructure/models/user';
 
 @Component({
 	selector        : 'app-login',
@@ -15,22 +16,25 @@ import {
 	changeDetection : ChangeDetectionStrategy.OnPush,
 })
 export class LoginComponent implements OnInit {
-	public placeholder: string = 'Test';
 	public form: FormGroup;
+	public user: IUser;
 
 	constructor(
 		private fb: FormBuilder,
-	) {
+	) { }
+
+	public ngOnInit(): void {
 		this.form = this.buildForm();
 	}
 
-	public ngOnInit(): void {
-		// this.form = this.buildForm();
+	public submit(): void {
+		this.user = this.form.value;
 	}
 
 	private buildForm(): FormGroup {
 		const form: FormGroup = this.fb.group({
-			firstName: '',
+			firstName : '',
+			email     : '',
 		});
 
 		return form;

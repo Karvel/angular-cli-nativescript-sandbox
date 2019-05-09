@@ -1,19 +1,34 @@
 <ActionBar [title]="'Native'"></ActionBar>
-<StackLayout class="p-20" *ngIf="form">
+<StackLayout class="p-20" *ngIf="form" [formGroup]="form">
 	<Label
 		text="Login Native"
 		class="h1 text-center"
 		textWrap="true"
 	></Label>
-	<app-required-input
-		[form]="form"
-		[formControlTitle]="'firstName'"
-		[placeholder]="'First Name'"
-	></app-required-input>
 	<Button
 		text="Home"
 		[nsRouterLink]="['/home']"
 		pageTransition="slide"
 		clearHistory="true"
 	></Button>
+	<app-required-input
+		[form]="form"
+		[formControlTitle]="'firstName'"
+		[placeholder]="'First Name'"
+	></app-required-input>
+	<app-email-control
+		[form]="form"
+		[formControlTitle]="'email'"
+		[placeholder]="'Email'"
+		[isRequired]="true"
+	></app-email-control>
+	<Button
+		text="Submit"
+		(tap)="submit()"
+		[isEnabled]="form.valid"
+	></Button>
+	<StackLayout *ngIf="user">
+		<Label [text]="user.firstName"></Label>
+		<Label [text]="user.email"></Label>
+	</StackLayout>
 </StackLayout>
