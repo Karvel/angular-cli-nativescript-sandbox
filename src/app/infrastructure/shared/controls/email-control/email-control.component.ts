@@ -34,8 +34,8 @@ export class EmailControlComponent implements OnInit {
 
 	private createValidators(): void {
 		if (this.form) {
-		(this.form.get(this.formControlTitle) as AbstractControl).setValidators([EmailValidation.validEmail(this.isRequired)]);
-		(this.form.get(this.formControlTitle) as AbstractControl).updateValueAndValidity();
+			(this.form.get(this.formControlTitle) as AbstractControl).setValidators([EmailValidation.validEmail(this.isRequired)]);
+			(this.form.get(this.formControlTitle) as AbstractControl).updateValueAndValidity();
 		}
 	}
 }
