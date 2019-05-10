@@ -7,7 +7,6 @@ import {
 import {
 	AbstractControl,
 	FormGroup,
-	ValidationErrors,
 }                          from '@angular/forms';
 
 import { EmailValidation } from '../../../validation/email-validation';

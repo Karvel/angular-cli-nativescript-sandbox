@@ -7,8 +7,8 @@
 			[formControlName]="formControlTitle"
 			[placeholder]="placeholder"
 		>
-		<mat-error *ngIf="formControlErrors">
-			{{ formControlErrors | formError }}
+		<mat-error *ngIf="formControl.errors">
+			{{ formControl.errors | formError }}
 		</mat-error>
 	</mat-form-field>
 </form>

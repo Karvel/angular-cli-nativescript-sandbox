@@ -7,7 +7,6 @@ import {
 import {
 	AbstractControl,
 	FormGroup,
-	ValidationErrors,
 }                             from '@angular/forms';
 
 import { RequiredValidation } from '../../../validation/required-validation';
@@ -27,8 +26,8 @@ export class RequiredInputComponent implements OnInit {
 		this.createValidators();
 	}
 
-	public get formControlErrors(): ValidationErrors {
-		return this.form.get(this.formControlTitle).errors;
+	public get formControl(): AbstractControl {
+		return this.form.get(this.formControlTitle);
 	}
 
 	private createValidators(): void {
