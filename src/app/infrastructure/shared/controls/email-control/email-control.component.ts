@@ -28,8 +28,8 @@ export class EmailControlComponent implements OnInit {
 		this.createValidators();
 	}
 
-	public get formControlErrors(): ValidationErrors {
-		return this.form.get(this.formControlTitle).errors;
+	public get formControl(): AbstractControl {
+		return this.form.get(this.formControlTitle);
 	}
 
 	private createValidators(): void {
