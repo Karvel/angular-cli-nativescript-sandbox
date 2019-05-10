@@ -5,7 +5,7 @@
 		[formControlName]="formControlTitle"
 	></TextField>
 	<Label
-		*ngIf="formControl.errors"
+		*ngIf="formControl.touched && formControl.errors"
 		[text]="formControl.errors | formError"
 	></Label>
 </StackLayout>
