@@ -2,12 +2,14 @@ import {
 	ChangeDetectionStrategy,
 	Component,
 	OnInit,
-}                from '@angular/core';
+}                               from '@angular/core';
 import {
 	FormBuilder,
 	FormGroup,
-}                from '@angular/forms';
-import { IUser } from '../../../infrastructure/models/user';
+	Validators,
+}                               from '@angular/forms';
+import { IUser }                from '../../../infrastructure/models/user';
+import { MatchFieldValidation } from '../../../infrastructure/validation/match-field-validation';
 
 @Component({
 	selector        : 'app-login',
@@ -32,10 +34,16 @@ export class LoginComponent implements OnInit {
 	}
 
 	private buildForm(): FormGroup {
-		const form: FormGroup = this.fb.group({
-			firstName : '',
-			email     : '',
-		});
+		const form: FormGroup = this.fb.group(
+			{
+				firstName    : [''],
+				email        : [''],
+				confirmEmail : [''],
+			},
+			{
+				validator: Validators.compose([MatchFieldValidation.validFieldMatch('email', 'confirmEmail')]),
+			},
+		);
 
 		return form;
 	}
