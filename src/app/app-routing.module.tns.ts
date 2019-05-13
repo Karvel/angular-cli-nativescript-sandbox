@@ -3,6 +3,7 @@ import { NativeScriptRouterModule } from 'nativescript-angular/router';
 import { Routes }                   from '@angular/router';
 
 import { HomeComponent }            from './features/home/home.component';
+import { NotFoundComponent }        from './features/not-found/not-found.component';
 
 export const routes: Routes = [
 	{
@@ -19,6 +20,11 @@ export const routes: Routes = [
 		path: 'auth',
 		loadChildren: './features/auth/auth.module#AuthModule',
 	},
+	{
+		path      : '**',
+		component : NotFoundComponent,
+		data      : { title: 'Not Found' },
+	},
 ];
 
 @NgModule({
@@ -26,3 +32,8 @@ export const routes: Routes = [
 	exports: [NativeScriptRouterModule],
 })
 export class AppRoutingModule { }
+
+export const routedComponents = [
+	HomeComponent,
+	NotFoundComponent,
+];

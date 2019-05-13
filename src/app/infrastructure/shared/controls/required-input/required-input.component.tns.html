@@ -1,0 +1,11 @@
+<StackLayout class="input-field" [formGroup]="form">
+	<TextField
+		[hint]="placeholder"
+		autocorrect="false"
+		[formControlName]="formControlTitle"
+	></TextField>
+	<Label
+		*ngIf="formControl.touched && formControl.errors"
+		[text]="formControl.errors | formError"
+	></Label>
+</StackLayout>

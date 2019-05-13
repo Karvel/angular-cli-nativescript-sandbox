@@ -1,7 +1,13 @@
 {
   "name": "angular-cli-nativescript-sandbox",
   "nativescript": {
-    "id": "org.nativescript.angularclinativescriptsandbox"
+    "id": "org.nativescript.angularclinativescriptsandbox",
+    "tns-android": {
+      "version": "5.3.1"
+    },
+    "tns-ios": {
+      "version": "5.3.1"
+    }
   },
   "version": "0.0.0",
   "scripts": {
@@ -34,7 +40,7 @@
     "nativescript-theme-core": "~1.0.4",
     "reflect-metadata": "~0.1.12",
     "rxjs": "~6.3.3",
-    "tns-core-modules": "~5.2.0",
+    "tns-core-modules": "^5.3.2",
     "zone.js": "^0.8.26"
   },
   "devDependencies": {

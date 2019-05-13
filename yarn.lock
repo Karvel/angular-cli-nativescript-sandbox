@@ -6789,15 +6789,17 @@ tmp@0.0.x, tmp@^0.0.33:
   dependencies:
     os-tmpdir "~1.0.2"
 
-tns-core-modules-widgets@5.2.0:
-  version "5.2.0"
-  resolved "https://registry.yarnpkg.com/tns-core-modules-widgets/-/tns-core-modules-widgets-5.2.0.tgz#ed7574e2d46295933f06dd940db210827477d25d"
+tns-core-modules-widgets@5.3.0:
+  version "5.3.0"
+  resolved "https://registry.yarnpkg.com/tns-core-modules-widgets/-/tns-core-modules-widgets-5.3.0.tgz#4651f9b756ea8ee43650dbbfb3e968d05ee26aac"
+  integrity sha512-mR8Pof0NhMRhPYcshQ54WyPrlbrqmTgrwxALtF1485fbCAHblz/2DqU7yGmTgC5LNdV7yhNeHYouoYg3TYOZbA==
 
-tns-core-modules@~5.2.0:
-  version "5.2.2"
-  resolved "https://registry.yarnpkg.com/tns-core-modules/-/tns-core-modules-5.2.2.tgz#07a0198784e1dd84acda899fc0b840fe9d860002"
+tns-core-modules@^5.3.2:
+  version "5.3.2"
+  resolved "https://registry.yarnpkg.com/tns-core-modules/-/tns-core-modules-5.3.2.tgz#4bff4d2fb9bc4ff54668c9328f05b6ff407a1e35"
+  integrity sha512-as53Mo8BghhaRXxol+lEpFP1G5E5q/J8rj2f29PbPIa9vI9tn4leZHFqNlofKUYgqQ9P0XLC7hj6gl4WTzsvNw==
   dependencies:
-    tns-core-modules-widgets "5.2.0"
+    tns-core-modules-widgets "5.3.0"
     tslib "^1.9.3"
 
 to-array@0.1.4:
