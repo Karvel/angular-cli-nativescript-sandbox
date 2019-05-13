@@ -1,0 +1,41 @@
+<div>
+	Login HTML
+	<form [formGroup]="form">
+		<app-required-input
+			[form]="form"
+			[formControlTitle]="'firstName'"
+			[placeholder]="'First Name'"
+		></app-required-input>
+		<app-email-control
+			[form]="form"
+			[formControlTitle]="'email'"
+			[placeholder]="'Email'"
+			[isRequired]="true"
+		></app-email-control>
+		<app-email-control
+			[form]="form"
+			[formControlTitle]="'confirmEmail'"
+			[placeholder]="'Confirm Email'"
+			[isRequired]="true"
+		></app-email-control>
+		<button
+			class="submit-button"
+			type="submit"
+			mat-raised-button
+			(click)="submit()"
+			[disabled]="!form.valid"
+		>
+			Submit
+		</button>
+	</form>
+</div>
+<mat-card class="user-card " *ngIf="user">
+	<div class="row">
+		<div class="card-label">Name:</div>
+		<div>{{ user.firstName }}</div>
+	</div>
+	<div class="row">
+		<div class="card-label">Email:</div>
+		<div>{{ user.email }}</div>
+	</div>
+</mat-card>

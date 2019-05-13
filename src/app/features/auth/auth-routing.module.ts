@@ -1,8 +1,9 @@
-import { NgModule }                from '@angular/core';
-import { RouterModule, Routes }    from '@angular/router';
+import { NgModule }                   from '@angular/core';
+import { RouterModule, Routes }       from '@angular/router';
 
-import { LoginComponent }          from './login/login.component';
-import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+import { LoginComponent }             from './login/login.component';
+import { LoginPresentationComponent } from './login/login-presentation.component';
+import { ForgotPasswordComponent }    from './forgot-password/forgot-password.component';
 
 const routes: Routes = [
 	{
@@ -30,5 +31,6 @@ export class AuthRoutingModule { }
 
 export const routedComponents = [
 	LoginComponent,
+	LoginPresentationComponent,
 	ForgotPasswordComponent,
 ];
