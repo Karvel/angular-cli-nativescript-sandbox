@@ -3,5 +3,6 @@
 <StackLayout class="p-20">
 	<Label text="Welcome to {{ title }}!" class="h1 text-center" textWrap="true"></Label>
 	<Button text="Login" [nsRouterLink]="['/auth/login']" pageTransition="slide" clearHistory="true"></Button>
-	<Button text="Reset Password" [nsRouterLink]="['/auth/reset-passwordddddd']" pageTransition="slide" clearHistory="true"></Button>
+	<Button text="Reset Password" [nsRouterLink]="['/auth/reset-password']" pageTransition="slide" clearHistory="true"></Button>
+	<Button text="Bad link" [nsRouterLink]="['123']" pageTransition="slide" clearHistory="true"></Button>
 </StackLayout>
