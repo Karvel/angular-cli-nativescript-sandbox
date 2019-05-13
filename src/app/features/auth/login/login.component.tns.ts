@@ -13,8 +13,12 @@ import { MatchFieldValidation } from '../../../infrastructure/validation/match-f
 
 @Component({
 	selector        : 'app-login',
-	templateUrl     : './login.component.html',
-	styleUrls       : ['./login.component.scss'],
+	template        :
+		`<app-login-presentation
+			[form]="form"
+			[user]="user"
+			(emitSubmit)="submit()"
+		></app-login-presentation>`,
 	changeDetection : ChangeDetectionStrategy.OnPush,
 })
 export class LoginComponent implements OnInit {

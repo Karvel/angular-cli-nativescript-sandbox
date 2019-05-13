@@ -1,10 +1,11 @@
-import { NgModule }                 from '@angular/core';
-import { Routes }                   from '@angular/router';
+import { NgModule }                   from '@angular/core';
+import { Routes }                     from '@angular/router';
 
-import { NativeScriptRouterModule } from 'nativescript-angular/router';
+import { NativeScriptRouterModule }   from 'nativescript-angular/router';
 
-import { LoginComponent }          from './login/login.component.tns';
-import { ResetPasswordComponent }  from './reset-password/reset-password.component.tns';
+import { LoginComponent }             from './login/login.component.tns';
+import { LoginPresentationComponent } from './login/login-presentation.component.tns';
+import { ResetPasswordComponent }     from './reset-password/reset-password.component.tns';
 
 const routes: Routes = [
 	{
@@ -32,5 +33,6 @@ export class AuthRoutingModule { }
 
 export const routedComponents = [
 	LoginComponent,
+	LoginPresentationComponent,
 	ResetPasswordComponent,
 ];
