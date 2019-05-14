@@ -8,14 +8,14 @@ import { SharedModule }         from '../shared/shared.module';
 
 import { throwIfAlreadyLoaded } from './guards/module-import.guard';
 
-import { RoutingService }       from './services/routing.service';
+import { services }             from './services';
 
 @NgModule({
 	imports: [
 		SharedModule,
 	],
 	providers: [
-		RoutingService,
+		services,
 	],
 })
 export class CoreModule {
