@@ -5,4 +5,5 @@
 	<Button text="Login" [nsRouterLink]="['/auth/login']" pageTransition="slide" clearHistory="true"></Button>
 	<Button text="Reset Password" [nsRouterLink]="['/auth/reset-password']" pageTransition="slide" clearHistory="true"></Button>
 	<Button text="Bad link" [nsRouterLink]="['123']" pageTransition="slide" clearHistory="true"></Button>
+	<Button *ngIf="isCameraAvailable" text="Open Camera" clearHistory="true" (tap)="requestPermissionsAndOpenCamera()"></Button>
 </StackLayout>
