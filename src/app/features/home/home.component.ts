@@ -29,7 +29,7 @@ export class HomeComponent implements OnInit {
 	}
 
 	public requestPermissionsAndOpenCamera(): void {
-		this.cameraService.requestPermissions();
+		this.cameraService.requestPermissionsAndOpenCamera();
 	}
 
 	private checkForCamera(): void {

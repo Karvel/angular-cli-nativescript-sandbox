@@ -8,7 +8,7 @@ export class CameraService {
 		return false;
 	}
 
-	public requestPermissions(): void {
+	public requestPermissionsAndOpenCamera(): void {
 		// noop
 	}
 }

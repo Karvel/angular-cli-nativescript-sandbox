@@ -20,7 +20,7 @@ export class CameraService {
 		return isAvailable();
 	}
 
-	public requestPermissions(): void {
+	public requestPermissionsAndOpenCamera(): void {
 		requestPermissions()
 			.then(() => this.takePhoto())
 			.catch((error) => console.log('error', error));
